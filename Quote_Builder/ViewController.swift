@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class TableViewCell: UITableViewCell {
     
@@ -17,22 +18,36 @@ class TableViewCell: UITableViewCell {
         
     }
 }
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, saveQuote {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SaveQuote {
+    
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    @IBOutlet weak var tableView: UITableView!
+    
     var objects = [Quote]()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.updateTableView()
         
+//        objects.append(quote)
         
     }
-    func updateTableView() {
-        for quote in objects {
-            quote.generateQuote()
-            objects.append(quote)
+    func updateTableView(quote: Quote) {
+        objects.append(quote)
+        tableView.reloadData()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        // Configure the destination view controller only when the save button is pressed.
+        guard let button = sender as? UIBarButtonItem, button === addButton else {
+            os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+            return
         }
+        let quoteViewController = segue.destination as! QuoteBuilderViewController
+        quoteViewController.delegate = self
+       
+        
     }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return objects.count
     }

@@ -14,8 +14,10 @@ class QuoteView: UIView {
     @IBOutlet weak var qouteAuthor: UILabel!
     
     @IBOutlet weak var image: UIImageView!
-    func setUpWithQuote() {
-        let quote: 
-        
+    
+    func setUpWithQuote(quote: Quote) {
+        self.qouteText.text = quote.quoteText
+        self.qouteAuthor.text = quote.quoteAuthor
+        self.image.image = quote.quoteImage
     }
 }
