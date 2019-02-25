@@ -16,7 +16,6 @@
 		15B34D5F221DC62B00A0CFEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B34D5D221DC62B00A0CFEB /* Main.storyboard */; };
 		15B34D61221DC62E00A0CFEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15B34D60221DC62E00A0CFEB /* Assets.xcassets */; };
 		15B34D64221DC62E00A0CFEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B34D62221DC62E00A0CFEB /* LaunchScreen.storyboard */; };
-		15E457B722203D5F003C6D51 /* QuoteBuilder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15E457B522203D5F003C6D51 /* QuoteBuilder.xcdatamodeld */; };
 		E0023F5193EB362045168847 /* Pods_Quote_Builder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D3418C6568DFECFCD83319 /* Pods_Quote_Builder.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +31,6 @@
 		15B34D60221DC62E00A0CFEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15B34D63221DC62E00A0CFEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15B34D65221DC62E00A0CFEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		15E457B622203D5F003C6D51 /* QuoteBuilder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuoteBuilder.xcdatamodel; sourceTree = "<group>"; };
 		42D3418C6568DFECFCD83319 /* Pods_Quote_Builder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quote_Builder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A18038AF20BFC3D5D70077 /* Pods-Quote_Builder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quote_Builder.release.xcconfig"; path = "Target Support Files/Pods-Quote_Builder/Pods-Quote_Builder.release.xcconfig"; sourceTree = "<group>"; };
 		EE53A240923034D0C2C399EF /* Pods-Quote_Builder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quote_Builder.debug.xcconfig"; path = "Target Support Files/Pods-Quote_Builder/Pods-Quote_Builder.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 				15689720221DE13600A6ACCF /* QuoteView.swift */,
 				15689722221DE48900A6ACCF /* QuoteView.xib */,
 				1568971E221DD04100A6ACCF /* DataModel.swift */,
-				15E457B522203D5F003C6D51 /* QuoteBuilder.xcdatamodeld */,
 				15B34D5D221DC62B00A0CFEB /* Main.storyboard */,
 				15B34D60221DC62E00A0CFEB /* Assets.xcassets */,
 				15B34D62221DC62E00A0CFEB /* LaunchScreen.storyboard */,
@@ -226,7 +223,6 @@
 			files = (
 				15B34D5C221DC62B00A0CFEB /* ViewController.swift in Sources */,
 				15B34D5A221DC62B00A0CFEB /* AppDelegate.swift in Sources */,
-				15E457B722203D5F003C6D51 /* QuoteBuilder.xcdatamodeld in Sources */,
 				15689725221DFDB900A6ACCF /* QuoteBuilderViewController.swift in Sources */,
 				1568971F221DD04100A6ACCF /* DataModel.swift in Sources */,
 				15689721221DE13600A6ACCF /* QuoteView.swift in Sources */,
@@ -429,19 +425,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		15E457B522203D5F003C6D51 /* QuoteBuilder.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				15E457B622203D5F003C6D51 /* QuoteBuilder.xcdatamodel */,
-			);
-			currentVersion = 15E457B622203D5F003C6D51 /* QuoteBuilder.xcdatamodel */;
-			path = QuoteBuilder.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 15B34D4E221DC62B00A0CFEB /* Project object */;
 }

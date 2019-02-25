@@ -42,6 +42,9 @@ class Quote {
         let photo = Photo()
         photo.generatePhoto(completion: {
             self.quoteImage = photo.image
+            OperationQueue.main.addOperation {
+                completion()
+            }
         })
      
         session.resume()
@@ -62,10 +65,11 @@ class Photo {
             }
             
             guard let imageData = data else { return }
-            guard let image = UIImage.init(data: imageData) else { return }
+            guard let image = UIImage(data: imageData) else { return }
             
             OperationQueue.main.addOperation {
                 self.image = image
+                completion()
             }
         }
          session.resume()
